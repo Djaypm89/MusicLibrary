@@ -24,7 +24,10 @@ this.getSongs();
 async getSongs() {
   try{
     let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music/");
-    console.log(response)
+    // console.log(response.data)
+    this.setState({
+      info: response.data 
+    })
   }
   catch (error) {
     console.log("API request error");
@@ -36,6 +39,9 @@ render(){
   return (
       <div className="App">
           <h1>Music Library</h1>
+          {this.state.info.map(info => {
+            return <p key={info.id}>{info.title}</p>
+          })}
       </div>
   );
   }

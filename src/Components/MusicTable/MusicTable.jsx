@@ -19,6 +19,9 @@ console.log(props)
                       <tr key={info.id}>
                       <td> { info.title } </td>
                       <td> { info.album } </td>
+                      <td> { info.artist } </td>
+                      <td> { info.genre } </td>
+                      <td> { info.releaseDate } </td>
                   </tr>
                   </table>
                             

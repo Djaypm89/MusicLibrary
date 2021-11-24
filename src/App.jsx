@@ -2,9 +2,10 @@ import React from 'react';
 import { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import MusicTable from './Components/MusicTable/MusicTable';
 
 
-class MusicTable extends Component {
+class App extends Component {
   constructor(props) {
 
       super(props);
@@ -32,22 +33,36 @@ async getSongs() {
   catch (error) {
     console.log("API request error");
   }
-}
+} 
 
 render(){
   console.log(this.state);
+
   return (
       <div className="App">
-          <h1>Music Library</h1>
-          {this.state.info.map(info => {
-            return <p key={info.id}>{info.title}</p>
-          })}
+          <MusicTable info={this.state.info} />
       </div>
   );
   }
 }
 
-export default MusicTable;
+export default App;
+
+
+
+
+// render(){
+//   console.log(this.state);
+//   return (
+//       <div className="App">
+//           <h1>Music Library</h1>
+//           {this.state.info.map(info => {
+//             return <p key={info.id}>{info.title} {info.album} </p>
+//           })}
+//       </div>
+//   );
+//   }
+// }
 
 
 

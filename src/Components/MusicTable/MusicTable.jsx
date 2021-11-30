@@ -67,16 +67,6 @@ export default MusicTable;
 // }
 
 
-// class MusicTable extends Component {
-//     constructor(props) {
-
-//         super(props);
-//         this.state = {
-//             info: [],
-
-//         }
-//     }
-
 
     
 

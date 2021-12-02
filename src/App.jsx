@@ -48,7 +48,8 @@ this.getSongs();
 
 async getSongs() {
   try{
-    let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music/");
+    // let response = await axios.get("http://www.devcodecampmusiclibrary.com/api/music/");
+    let response = await axios.get("localhost: 3001");
     // console.log(response.data)
     this.setState({
       info: response.data 
